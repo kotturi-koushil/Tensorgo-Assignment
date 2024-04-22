@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Clarity Improver</title>
+    <style>
+        .container {
+            margin-top: 220px;
+        }
+
+        body {
+            font-family: Roboto;
+            margin: 0;
+            padding: 0;
+            background-color: #050000;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            color: #f1efef;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .file_input {
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            width: 300px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #ccc;
+        }
+
+        .submitbu {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submitbu:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Video Clarity Improver</h1>
+        <form action="{{ url_for('uploadfile') }}" method="POST" enctype="multipart/form-data">
+            <input type="file" class='file_input' name="file">
+            <button class='submitbu' type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+
+</html>
